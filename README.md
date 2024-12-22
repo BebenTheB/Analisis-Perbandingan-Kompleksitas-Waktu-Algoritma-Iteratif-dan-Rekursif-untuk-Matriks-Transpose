@@ -56,8 +56,6 @@ Pendekatan rekursif memanfaatkan fungsi yang memanggil dirinya sendiri:
 2. Pindah ke elemen berikutnya secara horizontal, kemudian vertikal.
 3. Tukar elemen `[i][j]` dengan `[j][i]` untuk seluruh elemen di atas diagonal utama.
 
-**Catatan:** Kedua metode ini diasumsikan bekerja pada matriks persegi. Untuk matriks persegi panjang, algoritma hanya memproses elemen yang sesuai.
-
 ---
 
 ## Contributor
