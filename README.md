@@ -63,5 +63,4 @@ Pendekatan rekursif memanfaatkan fungsi yang memanggil dirinya sendiri:
 ## Contributor
 
 - **Ardiansyah**
-
-Feel free to reach out for collaboration or suggestions!
+- **Abiyoso**
