@@ -1,6 +1,6 @@
-# Analisis-Perbandingan-Kompleksitas-Waktu-Algoritma-Iteratif-dan-Rekursif-untuk-Matriks-Transpose
+# Algoritma-Iteratif-dan-Rekursif-untuk-Matriks-Transpose C++
 
 ## Table of Contents
 
-- (introduction)(#introduction)
+- [introduction].(#introduction)
 - (
