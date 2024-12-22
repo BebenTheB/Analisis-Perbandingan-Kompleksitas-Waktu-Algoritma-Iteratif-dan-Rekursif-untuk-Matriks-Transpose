@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Fungsi untuk mencetak matriks
-void printMatrix(int matrix[][100], int baris, int kolom) {
+void printMatrix(int matrix[][250], int baris, int kolom) {
     for (int i = 0; i < baris; i++) {
         for (int j = 0; j < kolom; j++) {
             cout << matrix[i][j] << " ";
@@ -12,7 +11,7 @@ void printMatrix(int matrix[][100], int baris, int kolom) {
 }
 
 // Fungsi untuk melakukan transpose matriks
-void transposeMatrix(int matrix[][100], int transposed[][100], int baris, int kolom) {
+void transposeMatrix(int matrix[][250], int transposed[][250], int baris, int kolom) {
     for (int i = 0; i < baris; i++) {
         for (int j = 0; j < kolom; j++) {
             transposed[j][i] = matrix[i][j];
@@ -22,15 +21,13 @@ void transposeMatrix(int matrix[][100], int transposed[][100], int baris, int ko
 
 int main() {
     int baris, kolom;
-    int matrix[100][100], transposed[100][100];
+    int matrix[250][250], transposed[250][250];
 
-    // Input ukuran matriks
     cout << "Masukkan jumlah baris matriks: ";
     cin >> baris;
     cout << "Masukkan jumlah kolom matriks: ";
     cin >> kolom;
 
-    // Input elemen matriks
     cout << "Masukkan elemen matriks:\n";
     for (int i = 0; i < baris; i++) {
         for (int j = 0; j < kolom; j++) {
@@ -39,14 +36,11 @@ int main() {
         }
     }
 
-    // Cetak matriks awal
     cout << "\nMatriks awal:\n";
     printMatrix(matrix, baris, kolom);
 
-    // Transpose matriks
     transposeMatrix(matrix, transposed, baris, kolom);
 
-    // Cetak matriks hasil transpose
     cout << "\nMatriks setelah transpose:\n";
     printMatrix(transposed, kolom, baris);
 
