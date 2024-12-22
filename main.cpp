@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-const int MAX_BARIS = 100;
-const int MAX_KOLOM = 100;
+const int MAX_BARIS = 250;
+const int MAX_KOLOM = 250;
 
 void transposeRekursif(int A[][MAX_KOLOM], int B[][MAX_BARIS], int baris, int kolom, int i, int j) {
     if (i >= baris) {
