@@ -1,49 +1,48 @@
 #include <iostream>
 using namespace std;
 
-const int MAX_BARIS = 250;
-const int MAX_KOLOM = 250;
+void printMatrix(int matrix[][250], int baris, int kolom) {
+    for (int i = 0; i < baris; i++) {
+        for (int j = 0; j < kolom; j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
 
-void transposeRekursif(int A[][MAX_KOLOM], int B[][MAX_BARIS], int baris, int kolom, int i, int j) {
-    if (i >= baris) {
-        return; // Base Case = selesai memproses semua baris
-    }
-    else if (j + 1 < kolom) {
-        B[j][i] = A[i][j];
-        transposeRekursif(A, B, baris, kolom, i, j + 1); // Pindah ke kolom berikutnya
-    }
-    else {
-        B[j][i] = A[i][j];
-        transposeRekursif(A, B, baris, kolom, i + 1, 0); // Pindah ke baris berikutnya dan reset saat kolom ke 0
+// Fungsi untuk melakukan transpose matriks
+void transposeMatrix(int matrix[][250], int transposed[][250], int baris, int kolom) {
+    for (int i = 0; i < baris; i++) {
+        for (int j = 0; j < kolom; j++) {
+            transposed[j][i] = matrix[i][j];
+        }
     }
 }
 
 int main() {
     int baris, kolom;
-    int A[MAX_BARIS][MAX_KOLOM];
-    int B[MAX_KOLOM][MAX_BARIS];
+    int matrix[250][250], transposed[250][250];
 
-    cout << "Masukkan jumlah baris: ";
+    cout << "Masukkan jumlah baris matriks: ";
     cin >> baris;
-    cout << "Masukkan jumlah kolom: ";
+    cout << "Masukkan jumlah kolom matriks: ";
     cin >> kolom;
 
-    cout << "Masukkan elemen matriks A:\n";
+    cout << "Masukkan elemen matriks:\n";
     for (int i = 0; i < baris; i++) {
         for (int j = 0; j < kolom; j++) {
-            cin >> A[i][j];
+            cout << "Elemen [" << i + 1 << "][" << j + 1 << "]: ";
+            cin >> matrix[i][j];
         }
     }
 
-    transposeRekursif(A, B, baris, kolom, 0, 0);
+    cout << "\nMatriks awal:\n";
+    printMatrix(matrix, baris, kolom);
 
-    cout << "Matriks Transpose:\n";
-    for (int i = 0; i < kolom; i++) {
-        for (int j = 0; j < baris; j++) {
-            cout << B[i][j] << " ";
-        }
-        cout << "\n";
-    }
+    transposeMatrix(matrix, transposed, baris, kolom);
+
+    cout << "\nMatriks setelah transpose:\n";
+    printMatrix(transposed, kolom, baris);
 
     return 0;
 }
