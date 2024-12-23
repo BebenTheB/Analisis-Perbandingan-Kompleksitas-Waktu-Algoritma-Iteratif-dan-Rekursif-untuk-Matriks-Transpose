@@ -60,5 +60,5 @@ Pendekatan rekursif memanfaatkan fungsi yang memanggil dirinya sendiri:
 
 ## Contributor
 
-- **Ardiansyah**
-- **Abiyoso**
+- **Ardiansyah 103012300243**
+- **Abiyoso 103012300006**
